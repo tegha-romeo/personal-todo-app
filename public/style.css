@@ -1,62 +1,68 @@
 body {
-  background-color: #0074D9;
-  font-family: Arial, sans-serif;
+  background-color: #0077cc;
   color: white;
-  margin: 0;
+  font-family: Arial, sans-serif;
   padding: 20px;
+  margin: 0;
 }
 
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  color: #333;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.form-group {
+form {
   display: flex;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 20px;
-  justify-content: center;
+  margin-bottom: 1rem;
 }
 
-input[type="text"],
-input[type="date"] {
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  width: 200px;
+form input, form button {
+  padding: 0.5rem;
+  font-size: 1rem;
 }
 
-button {
-  padding: 10px 20px;
-  background-color: white;
-  color: #0074D9;
+form button {
+  background: #0055aa;
+  color: white;
   border: none;
-  border-radius: 5px;
-  font-weight: bold;
   cursor: pointer;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: white;
-  color: #333;
+  margin-top: 1rem;
 }
 
 th, td {
-  padding: 12px;
-  border: 1px solid #ddd;
-  text-align: center;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
 }
 
 th {
-  background-color: #005bb5;
+  background-color: #005fa3;
   color: white;
+}
+
+.done-btn {
+  background-color: #28a745;
+  color: white; 
+  border: none;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.3rem;
+  cursor: pointer;
 }
