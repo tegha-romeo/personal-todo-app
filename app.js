@@ -39,3 +39,11 @@ app.put('/api/tasks/:id', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+// DELETE task by ID
+app.delete('/api/tasks/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+  const success = db.deleteTask(id);
+  res.json({ success });
+});
+

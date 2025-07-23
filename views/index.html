@@ -8,19 +8,20 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>My Daily Tasks</h1>
+  <table id="task-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Due Date</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
 
-    <form id="task-form">
-      <input type="text" id="title" placeholder="Task title" required />
-      <input type="text" id="description" placeholder="Task description (optional)" />
-      <input type="date" id="date" required />
-      <button type="submit">Add Task</button>
-    </form>
-
-    <h2 id="task-day-label">Tasks for Today</h2>
-    <ul id="task-list"></ul>
-  </div>
 
   <script src="/main.js"></script>
 </body>

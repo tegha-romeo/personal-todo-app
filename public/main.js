@@ -60,9 +60,50 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Load tasks for the selected date
-  dateInput.addEventListener('change', () => {
-    loadTasks(dateInput.value);
-  });
+ function loadTasks(date) {
+  fetch(`/api/tasks?date=${date}`)
+    .then(res => res.json())
+    .then(tasks => {
+      const tbody = document.querySelector('#task-table tbody');
+      tbody.innerHTML = '';
 
-  loadTasks(today);
+      tasks.forEach(task => {
+        const tr = document.createElement('tr');
+
+        tr.innerHTML = `
+          <td>${task.id}</td>
+          <td>${task.title}</td>
+          <td>${task.description}</td>
+          <td>${task.date}</td>
+          <td>${task.is_done ? '✅' : '❌'}</td>
+          <td>
+            ${!task.is_done ? `<button class="done-btn" data-id="${task.id}">✔️</button>` : ''}
+            <button class="delete-btn" data-id="${task.id}">🗑️</button>
+          </td>
+        `;
+
+        tbody.appendChild(tr);
+      });
+    });
+}
+
+});
+document.querySelector('#task-table tbody').addEventListener('click', (e) => {
+  const id = e.target.dataset.id;
+
+  if (e.target.classList.contains('done-btn')) {
+    fetch(`/api/tasks/${id}`, {
+      method: 'PUT'
+    }).then(() => {
+      loadTasks(document.getElementById('date').value);
+    });
+  }
+
+  if (e.target.classList.contains('delete-btn')) {
+    fetch(`/api/tasks/${id}`, {
+      method: 'DELETE'
+    }).then(() => {
+      loadTasks(document.getElementById('date').value);
+    });
+  }
 });

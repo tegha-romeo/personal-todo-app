@@ -32,9 +32,17 @@ function markTaskAsDone(id) {
   const info = stmt.run(id);
   return info.changes > 0;
 }
+function deleteTask(id) {
+  const stmt = db.prepare('DELETE FROM tasks WHERE id = ?');
+  const info = stmt.run(id);
+  return info.changes > 0;
+}
+
 
 module.exports = {
   getTasksByDate,
   addTask,
-  markTaskAsDone
+  markTaskAsDone,
+  deleteTask
 };
+
