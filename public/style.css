@@ -1,131 +1,62 @@
-/* public/style.css — Blue Theme */
-
 body {
-  font-family: sans-serif;
-  background-color: #0077cc; /* Blue background */
-  color: #ffffff;
-  padding: 2rem;
+  background-color: #0074D9;
+  font-family: Arial, sans-serif;
+  color: white;
   margin: 0;
+  padding: 20px;
 }
 
 .container {
-  max-width: 600px;
-  margin: auto;
-  background: #ffffff; /* White container */
-  color: #333;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-h1, h2 {
-  color: #003366;
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-form {
+.form-group {
   display: flex;
-  gap: 0.5rem;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
 }
 
-form input,
-form button {
-  flex: 1 1 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  background-color: #f0f8ff;
-  color: #003366;
-  border: 1px solid #3399ff;
-  border-radius: 5px;
-}
-
-form input::placeholder {
-  color: #666;
-}
-
-form button {
-  background: #0055aa;
-  color: white;
+input[type="text"],
+input[type="date"] {
+  padding: 10px;
+  font-size: 16px;
   border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-form button:hover {
-  background: #003f7f;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  background: #e6f2ff;
-  margin-bottom: 0.5rem;
-  padding: 0.75rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-radius: 5px;
+  width: 200px;
 }
 
-li.done {
-  text-decoration: line-through;
-  color: #888;
-  background-color: #cce0ff;
-}
-
-li button {
-  background: #28a745;
-  color: white;
+button {
+  padding: 10px 20px;
+  background-color: white;
+  color: #0074D9;
   border: none;
-  padding: 0.4rem 0.6rem;
-  border-radius: 4px;
+  border-radius: 5px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-li button:hover {
-  background: #1f7a33;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 1rem;
-  background: #e6f2ff;
-  color: #000;
+  background-color: white;
+  color: #333;
 }
 
 th, td {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  text-align: left;
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
 }
 
 th {
-  background-color: #0057a3;
+  background-color: #005bb5;
   color: white;
 }
-
-td button {
-  padding: 0.3rem 0.6rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-right: 0.2rem;
-}
-
-.done-btn {
-  background-color: #28a745;
-  color: white;
-}
-
-.delete-btn {
-  background-color: #dc3545;
-  color: white;
-}
-
-
