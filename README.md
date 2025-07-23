@@ -26,7 +26,7 @@ A simple, date-based todo tracker built with Node.js, Express, SQLite, and Vanil
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v14+ recommended)
+- [Node.js](https://nodejs.org/) 
 - [npm](https://www.npmjs.com/)
 
 ---
