@@ -1,0 +1,5 @@
+node_modules/
+db/todo.db         # Optional: exclude your dev database
+target/
+*.log
+.env
