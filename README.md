@@ -43,3 +43,8 @@ npm install
 
 # 3. Start the server
 node app.js
+
+OR
+
+# 4. using docker 
+- sudo docker run -p 3000:3000 todo-tracker
